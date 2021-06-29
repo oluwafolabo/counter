@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/header.css">
+</head>
+<body>
+    <header>
+        <div>
+            <nav>
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="#">BLOG</a></li>
+                    <li><a href="#">ABOUT </a></li>
+                    <li><a href="#">INNOVATION</a></li>
+                </ul>
+            </nav>
+            <center>
+            <div id ="time">
+              <span id ="one">7</span>Hrs <span id ="two">60</span>min <span id ="three">60</span>sec
+            </div>
+        </center>
+    </header>
+  <script>
+  var action; 
+
+    var hrs = 7;
+  var min = 60;   
+  var sec = 60;
+  function counter(){
+      action = setInterval(function(){
+        sec -= 1;
+        document.getElementById("three").innerHTML = sec;
+
+        
+      if (sec == 0 ){
+         sec = 60;
+        min -= 1;
+        document.getElementById("two").innerHTML = min;
+      
+        };
+
+     if  (min == 0){
+            min = 60
+            hrs -= 1;
+        document.getElementById("one").innerHTML = hrs;
+      
+        };
+        
+    },1000); 
+     
+  }
+
+  counter();
+  </script>
+</body>
+</html>
